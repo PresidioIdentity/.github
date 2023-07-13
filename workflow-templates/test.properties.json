@@ -3,7 +3,7 @@
     "description": "test starter workflow.",
     "iconName": "example-icon",
     "categories": [
-        "Go"
+        "Issue Monitoring"
     ],
     "filePatterns": [
         "package.json$",
