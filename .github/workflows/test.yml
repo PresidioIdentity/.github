@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/github-script@v6
-        with:
+      with:
           script: |
             // this gets the number at the end of the content URL, which should be the issue/PR number
             const issue_num = context.payload.project_card.content_url.split('/').pop()
