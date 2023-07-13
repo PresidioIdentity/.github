@@ -1,0 +1,14 @@
+name: test_flow
+
+on:
+  issue:
+    types:
+      - created
+
+jobs:
+label_issue:
+    runs-on: ubuntu-latest
+    steps:
+       run: |
+          gh issue edit --add-label "test"
+
