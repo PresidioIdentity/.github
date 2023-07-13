@@ -1,17 +1,20 @@
-name: test_flow
-
+name: Documentation Label
 on:
   project_card:
-    types: [created]
+    - moved
 
 jobs:
-  label_issue:
+  update_label:
+    if: github.event.project_card.column_id == 'In Review'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/github-script@v6
         with:
           script: |
-            github.rest.issues.removeLabel({
+            // this gets the number at the end of the content URL, which should be the issue/PR number
+            const issue_num = context.payload.project_card.content_url.split('/').pop()
+            github.rest.issues.addLabels({
+              issue_number: issue_num,
               owner: context.repo.owner,
               repo: context.repo.repo,
               name: ["needs review"]
