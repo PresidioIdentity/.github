@@ -1,7 +1,7 @@
 name: test_flow
 
 on:
-  issue:
+  issues:
     types:
       - created
 
