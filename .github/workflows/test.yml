@@ -1,7 +1,7 @@
 name: Needs Review Label
 on:
   project_card:
-    - moved
+    types: [moved]
 
 jobs:
   update_label:
