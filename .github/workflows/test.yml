@@ -10,5 +10,5 @@ label_issue:
     runs-on: ubuntu-latest
     steps:
        run: |
-          gh issue edit --add-label "test"
+          gh issue edit --add-label "bug"
 
