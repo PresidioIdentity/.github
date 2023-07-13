@@ -6,9 +6,10 @@ on:
       - created
 
 jobs:
-label_issue:
+  label_issue:
     runs-on: ubuntu-latest
     steps:
+     - name: add bug label
        run: |
           gh issue edit --add-label "bug"
 
