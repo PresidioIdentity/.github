@@ -1,4 +1,4 @@
-name: Documentation Label
+name: Needs Review Label
 on:
   project_card:
     - moved
