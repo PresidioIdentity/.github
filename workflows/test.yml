@@ -8,7 +8,12 @@ jobs:
   label_issue:
     runs-on: ubuntu-latest
     steps:
-     - name: add bug label
-       run: |
-          gh issue edit --add-label "test"
+    - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["needs review"]
+            })
 
