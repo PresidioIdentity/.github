@@ -5,7 +5,7 @@ on:
 
 jobs:
   update_label:
-    if: github.event.project_card.name == 'In review'
+    if: github.event.project_column.name == 'In review'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/github-script@v6
